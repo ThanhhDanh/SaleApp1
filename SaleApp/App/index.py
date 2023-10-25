@@ -3,11 +3,11 @@ import dao
 app = Flask(__name__)
 @app.route('/')
 def index():
-    request.args.get('kw')
+    kw = request.args.get('kw')
     return render_template(
         'index.html',
         categories = dao.load_categories(),
-        products=dao.load_products()
+        products=dao.load_products(kw)
     )
 
 if __name__ == "__main__":

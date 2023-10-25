@@ -47,8 +47,20 @@ def load_products(kw=None):
             "price": 20000000,
             "image":"https://cdn-v2.didongviet.vn/files/media/catalog/product/s/a/samsung-galaxy-z-flip4-5g-256gb-fullbox-likenew-didongviet.jpg"
         }
+        , {
+            "id": "7",
+            "name": "Iphone",
+            "price": 20000000,
+            "image": "https://cdn-v2.didongviet.vn/files/media/catalog/product/s/a/samsung-galaxy-z-flip4-5g-256gb-fullbox-likenew-didongviet.jpg"
+        }
+        , {
+            "id": "8",
+            "name": "Iphone",
+            "price": 20000000,
+            "image": "https://cdn-v2.didongviet.vn/files/media/catalog/product/s/a/samsung-galaxy-z-flip4-5g-256gb-fullbox-likenew-didongviet.jpg"
+        }
     ]
     if kw:
-        return (x for x in products if x['x.name'].find(kw) >= 0)
+        products=[x for x in products if x['name'].find(kw) >= 0]
 
     return products
