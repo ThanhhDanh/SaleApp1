@@ -1,7 +1,7 @@
 from flask import render_template, request
 import dao
 from SaleApp.App import app
-
+from SaleApp.App.Admin import admin
 
 @app.route('/')
 def index():

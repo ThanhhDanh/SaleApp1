@@ -4,7 +4,7 @@ def load_categories():
    return  Categories.query.all()
 
 def load_products(kw=None):
-    products = Products.query
+    product = Products.query
     if kw:
-        products = products.filter(Products.name.contains(kw))
-    return products
+        product = product.filter(Products.name.contains(kw))
+    return product
